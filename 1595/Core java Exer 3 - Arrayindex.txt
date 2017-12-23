@@ -1,0 +1,56 @@
+package myproject;
+
+public class ArrayIndex {
+	public static void main(String[] args) {
+		int[] j = new int [10];
+		int i = 0;
+		int Count = 0;
+		
+		for (j[i] = 1; j[i] <= 10; j[i]++) {
+			if ((j[i] % 3) == 0 )
+				System.out.println("Even position dived by 3 =" +j[i]);
+			if ((j[i] % 3) == 0 )
+				Count = Count + 1;
+		}
+		System.out.println("Count of odd numbers are =" +Count);
+		
+		//Search for a key value in an arry and print if its available or not
+		
+		     ArrayIndex obj = new ArrayIndex();
+		     obj.Keyvalue(11);
+		     obj.Primenum();
+	}
+	public void Keyvalue(int k) {
+		int[] j = new int [10];
+		int i = 0;
+		for (j[i] = 1; j[i] <= 10; j[i]++) {
+			if (j[i] == k ) {
+				System.out.println("The key value is =" +k);
+				}
+			
+			}
+		System.out.println("The key value not found");
+	}
+		
+	public void Primenum() {
+		int[] j = new int [10];
+		int[] k = new int [10];
+		int i = 0;
+		for (j[i] = 1; j[i] <= 10; j[i]++) {
+			boolean isPrime = true;
+			for (k[i] = 2; k[i] < j[i]; k[i]++) {
+				if (j[i] % k[i] == 0) {
+					isPrime = false;
+					break;
+				}
+				
+				}
+				if (isPrime)
+					System.out.println("the primary numbers are =" +j[i]);
+			}
+
+		
+	
+	}
+}
+

@@ -1,0 +1,30 @@
+package myproject;
+
+public class Series {
+	public static void main(String[] args) {
+		int limit = 100;
+		int f = 1;
+		
+		
+		for (int i = 1; i <= limit; i = i+2) {
+			if (f % 2 == 0) {
+				System.out.println("Value of i is =" +(-i));}
+			else {System.out.println("Value of i is =" +(i));}
+			f++;
+			}
+		}
+	}
+
+
+-------------------------------------------------------------------  
+
+package myproject;
+
+public class Series1 {
+
+	public static void main(String[] args) {
+		for(int i = 1; i <= 15; i++) {
+			System.out.println("Values are 1/" +i);
+		}
+	}
+}

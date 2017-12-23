@@ -1,0 +1,13 @@
+public class IPaddressValidation {
+
+	public static boolean validateIPaddress(String ipAddress) {
+		int len = ipAddress.length();
+		if (len < 7 || len > 15) {
+			System.out.println("invalid length " +len);
+			return false;
+		}
+		if (ipAddress.charAt(0) == '.' || ipAddress.charAt(len - 1) == '.') {
+			System.out.println("invalid length " +len);
+		}
+	}
+}

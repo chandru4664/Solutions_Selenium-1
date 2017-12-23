@@ -1,0 +1,46 @@
+package myproject;
+
+public class LoanEligibility {
+	
+	int Service;
+	String marritalStatus;
+	String jobStatus;
+	
+	public LoanEligibility() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public LoanEligibility(int service, String marritalStatus, String jobStatus) {
+		super();
+		Service = service;
+		this.marritalStatus = marritalStatus;
+		this.jobStatus = jobStatus;
+	}
+	
+	public void married(int service, String marritalStatus) {
+		if ((service >= 30) & marritalStatus == "M" )
+		{System.out.println("the eligible amout for permanent employee with married status will be = 600000");}
+		else {System.out.println("the eligible amout for permanent employee with married status will be = 350000");
+	}
+	}
+	public void Unmarried(int service, String marritalStatus) {
+		if ((service >= 30) & marritalStatus == "U" )
+		{System.out.println("the eligible amout for permanent employee with Unmarried status will be = 500000");}
+		else {System.out.println("the eligible amout for permanent employee with Unmarried status will be = 250000");
+	}
+	}
+	public void temp(int service, String marritalStatus, String jobStatus) {
+		if ((service >= 30 || (service < 30)) || marritalStatus == "M" || marritalStatus == "U" || jobStatus == "temp"){
+			System.out.println("Temporary employee loan amout with any status = 100000");}
+	}
+		
+		public static void main(String[] args) {
+			LoanEligibility loan = new LoanEligibility();
+			loan.married(32, "M");
+			loan.Unmarried(29, "U");
+			loan.temp(40, "U", "temp");
+		}
+		
+		}
+	
