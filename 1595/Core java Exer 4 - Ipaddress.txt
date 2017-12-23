@@ -1,13 +1,53 @@
+package myproject;
+
 public class IPaddressValidation {
 
 	public static boolean validateIPaddress(String ipAddress) {
+		
 		int len = ipAddress.length();
 		if (len < 7 || len > 15) {
 			System.out.println("invalid length " +len);
 			return false;
 		}
 		if (ipAddress.charAt(0) == '.' || ipAddress.charAt(len - 1) == '.') {
-			System.out.println("invalid length " +len);
+			System.out.println("Either first or last charecter is a . ");
+			return false;
 		}
+		
+		int dotCounter = 0;
+		boolean preDotChar = false;
+		
+		for(int i = 0; i < len; i++) {
+			if (ipAddress.charAt(i) == '.'){
+				if (preDotChar) {
+					System.out.println("two consitive .'s");
+					return false;
+					
+				}
+				preDotChar = true;
+				dotCounter++;
+			}else {if (!Character.isDigit(ipAddress.charAt(i))) {
+				System.out.println("Has alphabets or special char");
+				return false;
+			}
+			preDotChar = false;
+			}
+							
+			}
+					
+				if (dotCounter != 3) {
+					System.out.println("more than 3 .'s");
+					return false;
+					
+				}
+				return true;
+				}
+	public static void main(String[] args) {
+		String address = "10.35.39.70";
+		String validity = IPaddressValidation.validateIPaddress(address) ? "valid" : "not valid";
+		System.out.println("IP address" + address + "is" + validity);
+		
 	}
 }
+	
+
