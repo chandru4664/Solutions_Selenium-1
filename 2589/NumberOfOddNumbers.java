@@ -1,6 +1,6 @@
 package com.htc.javaexercise.exercise;
 
-public class NumberOfOddNumbers {
+public class ArrayOfOddNumbers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
