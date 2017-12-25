@@ -24,10 +24,10 @@ public class LoanEligibility {
 					System.out.println("Loan amount Eligible for this employee is Rupees 3.5 Lakh");
 				}
 			
-		}else if(jobStatus=="temporary") {
+		}else if(jobStatus=="temporary" && service>=30) {
 			System.out.println("Loan amount Eligible for this employee is Rupees 1 Lakh");
 		}else {
-			System.out.println("Please reach out to company HR for more details");
+			System.out.println("Minimum 30 years experince needed");
 		}
 	}
 
