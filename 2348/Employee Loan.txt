@@ -1,0 +1,74 @@
+package com.htc.mypackage.assignments;
+import java.util.Scanner;
+//import java.lang.System;
+public class EmployeeLoan {
+	static String marital_status = " ";
+	static int employee_service = 0;
+	static String employee_status = " ";
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//EmployeeLoan emp_loan = new EmployeeLoan(); 
+		Scanner scan=new Scanner(System.in);
+		
+		System.out.println("Enter the Employee Staus Permenant(P) Temporary(T):");
+		employee_status = scan.next();
+		
+		System.out.println("Enter the Marital status Married(M) Unmarried(U):");
+		marital_status = scan.next();
+		
+		System.out.println("Enter the Employee Service number of years:");
+		employee_service = scan.nextInt();
+		
+		scan.close();
+		
+		if (employee_status.compareToIgnoreCase("P") == 0) {
+			if (marital_status.compareToIgnoreCase("M") == 0) {
+				if (employee_service >= 30) {
+					System.out.println("Loan sanctioned for 600,000");
+				}
+				else {
+					System.out.println("Loan santioned for 350,000");
+				}
+			}
+			else {
+				if (employee_service >= 30) {
+					System.out.println("Loan sanctioned for 500,000");
+				}
+				else {
+					System.out.println("Loan sanctioned for 250,000");
+				}
+			}
+			
+		}
+		else {
+			System.out.println("Loan sanctioned for 100,000");
+		}
+	}
+
+	public String getMarital_status() {
+		return marital_status;
+	}
+
+	public void setMarital_status(String marital_status) {
+		EmployeeLoan.marital_status = marital_status;
+	}
+
+	public String getEmployee_status() {
+		return employee_status;
+	}
+
+	public void setEmployee_status(String employee_status) {
+		EmployeeLoan.employee_status = employee_status;
+	}
+	
+	public int getEmployee_service() {
+		return employee_service;
+	}
+
+	public void setEmployee_service(int employee_service) {
+		EmployeeLoan.employee_service = employee_service;
+	}
+
+
+}

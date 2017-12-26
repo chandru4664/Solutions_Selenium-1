@@ -1,0 +1,29 @@
+package com.htc.mypackage.assignments;
+
+import java.util.Scanner;
+public class PrintSeries 	
+	{
+	 public static void main(String args[]) 
+	 {
+		  Scanner sc = new Scanner(System.in);
+		  int c, i = 1, n; 
+		  int flag=1;                                     // c for counter, i for even nos.
+		  System.out.print("Enter the number of terms: ");
+		  n = sc.nextInt();
+		  sc.close();
+		  System.out.print("\n");
+		  for (c = 1; c <= n; c++, i = i + 1)               //to generate n terms of the series
+		  {
+		  // System.out.println(i + " ");
+		   if (i % 2 == 1) {
+			   if (flag % 2 == 1) {
+		           System.out.print(i + " ");  
+			   }
+			   else 
+				   System.out.print(-i + " ");
+			   flag += 1;   
+		   } 
+		   
+		  }
+		 }
+		}
