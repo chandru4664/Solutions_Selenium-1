@@ -1,0 +1,93 @@
+package com.test.exercise.training;
+import java.io.*;
+
+class Bankloan
+{
+	String jobtype;
+	String status;
+	int yrsofservice;
+	int eligibleamt;
+	
+	int calEligibility(String jobtype, String status, int  yrsofservice)
+	{   
+		eligibleamt = 0 ; 
+		this.jobtype = jobtype;
+		this.status = status;
+		this.yrsofservice = yrsofservice;
+		if(jobtype.equals("temporary"))	
+		{
+			
+			eligibleamt = 100000;
+		}
+		else if (jobtype.equals("permanent"))
+		{
+			if(status.equals("married") && yrsofservice>=30)
+			{
+				eligibleamt=600000; 
+			}
+			if(status.equals("married") && yrsofservice<30)
+			{
+				eligibleamt=350000; 
+			}
+			if(status.equals("unmarried") && yrsofservice>=30)
+			{
+				eligibleamt=500000; 
+			}
+			if(status.equals("unmarried") && yrsofservice<30)
+			{
+				eligibleamt=250000; 
+			}
+		}
+				return eligibleamt;
+	}
+		
+	
+	
+	
+}
+
+public class Loan {
+
+	/**
+	 * @param args
+	 * 
+	 */
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int eligibilty;
+		try{
+		String jobnature;
+		String marstatus;
+		int yrsofexp;
+			
+		System.out.println("Enter the jobtype:permanet/temporary marstatus:married/unmarried yearsof service");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input=br.readLine();
+		String[] words=input.split("\\s");
+		jobnature=words[0];
+		marstatus=words[1];
+		yrsofexp=Integer.parseInt(words[2]);
+		Bankloan bloan=new Bankloan();
+		eligibilty=bloan.calEligibility(jobnature,marstatus,yrsofexp);
+		if(eligibilty==0)
+				{
+			System.out.println("Enter a valid value");
+				}
+		else
+		{
+			System.out.println("You are Eligible for the amount:" + eligibilty);
+		}
+		
+		
+		}
+		
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}
