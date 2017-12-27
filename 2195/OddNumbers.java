@@ -8,6 +8,7 @@ public class OddNumbers {
 		int[] numArray;
 		numArray = new int[userMaxNumber];
 
+		
 		for (int i = 0; i <= userMaxNumber - 1; i++) {
 			numArray[i] = i + 1;
 		}

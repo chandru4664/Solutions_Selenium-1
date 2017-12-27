@@ -10,14 +10,16 @@ public class ArrayClassMain {
 		int resultCount = 1;
 		String inputLaptop;
 		String displayPrice = "";
+		int primeCount = 0;
 
 		// Object Creations
 		Scanner sc = new Scanner(System.in);
 		OddNumbers odd = new OddNumbers();
 		KeyValue k1 = new KeyValue();
+		PrimeNumbers p1 = new PrimeNumbers();
 
 		// Receive user Input for odd number count
-		/*System.out.println("Enter the number : ");
+		System.out.println("Enter the number : ");
 		while (!sc.hasNextInt()) {
 			System.out.println("Invalid entry. Enter the number: ");
 			sc.next();
@@ -40,5 +42,17 @@ public class ArrayClassMain {
 		} else {
 			System.out.println(inputLaptop + " Price : $" + displayPrice);
 		}
+		
+		// Receive user Input for prime number count
+		System.out.println("Enter Max number to display all Prime Numbers : ");
+		while (!sc.hasNextInt()) {
+			System.out.println("Invalid entry. Enter the number: ");
+			sc.next();
+		}
+		userInput = sc.nextInt();
+		
+		primeCount = p1.countPrimeNumbers(userInput);
+		System.out.println("Total Prime Numbers : " + primeCount);
+		
 	}
 }
