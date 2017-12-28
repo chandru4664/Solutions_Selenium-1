@@ -1,0 +1,31 @@
+   package htc.javatraining.classwork; 
+ 
+   
+ 2   import java.util.Scanner;  
+ 3     
+ 4   public class Series {  
+ 5   	public static void main(String[] args) {  
+ 6  		Scanner userinput = new Scanner(System.in);  
+ 7   		System.out.println("Enter the length of the number to be printed:");  
+ 8   		int numPrint= userinput.nextInt();  
+ 9   		userinput.close();		  
+ 10   		
+ 12   		for (c= 1; c<=numPrint; c++)  
+ 13   		{  
+ 14   			if (f%2 ==0) {  
+ 15   				System.out.println(-i+ " ");  
+ 16   					}  
+ 17   		else  
+ 18   			{  
+ 19   				System.out.println(i+ " ");  
+ 20   			}  
+ 21   			i+=2;  
+ 22   			f++;			  
+ 23   		}  
+ 24  	  
+ 25     
+ 26   	 }  
+ 27   	  
+ 28   	  
+ 29   }  
+
